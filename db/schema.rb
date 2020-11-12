@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2020_11_12_064731) do
   end
 
   create_table "ideas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "category", null: false
+    t.bigint "category_id", null: false
     t.text "body", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
