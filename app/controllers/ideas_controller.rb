@@ -26,7 +26,6 @@ class IdeasController < ApplicationController
   def create
     # POSTリクエストのカテゴリ名があるか探す
     category = Category.find_by(name: params[:category_name])
-　　
     # 無かった場合に新しく作成
     unless category
       category = Category.new(name: params[:category_name])
@@ -36,7 +35,6 @@ class IdeasController < ApplicationController
         return
       end
     end
-　　
     # ideaテーブルに保存
     idea = Idea.new(category_id: category.id, body: params[:body])
     # 保存できなかった場合にエラーコードを返す
@@ -44,7 +42,6 @@ class IdeasController < ApplicationController
       render body: nil, status: 422
       return
     end
-　　
     # 保存に成功したらコードを返す。
     render body: nil, status: 201
   end
