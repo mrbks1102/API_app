@@ -125,3 +125,17 @@ Style/StringLiterals:
 # SupportedStyles: percent, brackets
 Style/SymbolArray:
   EnforcedStyle: brackets
+
+Documentation:
+  Enabled: false
+
+Metrics/AbcSize:
+  # The ABC size is a calculated magnitude, so this number can be a Fixnum or
+  # a Float.
+  Max:  25
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/AsciiComments:
+  Enabled: false
